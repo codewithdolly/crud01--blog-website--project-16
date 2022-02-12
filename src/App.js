@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       <div className="App">
-        <NewPost />
-        <EditPost />
+        {/* <NewPost />
+        <EditPost /> */}
         <ViewPost />
         <ArchivePost />
       </div>

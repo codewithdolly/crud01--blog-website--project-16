@@ -8,7 +8,7 @@ import { styled } from "@mui/material/styles";
 import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import CloseIcon from '@mui/icons-material/Close';
 import { Avatar } from '@mui/material';
-import img1 from "../images/d.jpg"
+import img1 from "../images/s.jpg"
 
 const Input = styled("input")({
   display: "none",
