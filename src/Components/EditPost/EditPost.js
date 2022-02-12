@@ -26,9 +26,6 @@ const EditPost = () => {
         noValidate
         autoComplete="off"
       >
-     <Typography variant="h1" component="div" gutterBottom sx={{fontSize:"25px"}}>
-       Create New Post <br />-----------------------
-      </Typography>
 
         {/* Header */}
         <TextField
