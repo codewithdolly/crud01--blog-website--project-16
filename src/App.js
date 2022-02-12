@@ -8,7 +8,7 @@ function App() {
       <div className="App">
         {/* <NewPost />
         <EditPost /> */}
-        <ViewPost />
+        {/* <ViewPost /> */}
         <ArchivePost />
       </div>
     </>
