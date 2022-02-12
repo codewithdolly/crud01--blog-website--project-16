@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.scss';
+import React from "react";
+import "./App.scss";
+import { NewPost, EditPost, ViewPost, ArchivePost } from "./Components";
 
 function App() {
   return (
     <>
-    <div className="App">
-    Hi
-  </div>
-  </>
+      <div className="App">
+        <NewPost />
+        <EditPost />
+        <ViewPost />
+        <ArchivePost />
+      </div>
+    </>
   );
 }
 
