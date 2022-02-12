@@ -15,27 +15,76 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import user from "./Components/images/d.jpg";
+import InputBase from '@mui/material/InputBase';
+import SearchIcon from '@mui/icons-material/Search';
+import { styled, alpha } from '@mui/material/styles';
 
-// const pages = ['Home', 'New Post', 'Edit', 'Archive'];
 const pages = [
   {
     name: "Home",
     path: "/",
+    page:<ViewPost />,
   },
   {
     name: "New Post",
     path: "/newpost",
+    page:<NewPost />,
   },
   {
     name: "Edit",
     path: "/edit",
+    page:<EditPost />,
   },
   {
     name: "Archive",
     path: "/archivepost",
+    page:<ArchivePost />,
   },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  marginRight: '10px',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
+      },
+    },
+  },
+}));
 
 function App() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -114,7 +163,7 @@ function App() {
                   component="div"
                   sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
                 >
-                  Logo
+                  Blog
                 </Typography>
                 <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                   {pages.map((page) => {
@@ -133,6 +182,15 @@ function App() {
                     );
                   })}
                 </Box>
+                <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
 
                 <Box sx={{ flexGrow: 0 }}>
                   <Tooltip title="Open settings">
@@ -169,11 +227,13 @@ function App() {
         </div>
 
         <Routes>
-          <Route index path="/" component={<ViewPost />}>
-            <Route path="/newpost" element={<NewPost />} />
-            <Route path="/edit" element={<EditPost />} />
-            <Route path="/archivepost" element={<ArchivePost />} />
-          </Route>
+        <Route index path="/newpost" element={<NewPost />} />
+        {pages.map((page)=>{
+          return(<>
+          
+            <Route path={page.path} element={page.page} />
+          </>)
+        })}
         </Routes>
       </BrowserRouter>
     </>

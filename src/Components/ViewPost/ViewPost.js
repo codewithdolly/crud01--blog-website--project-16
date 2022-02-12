@@ -2,18 +2,11 @@ import React from 'react'
 import "./ViewPost.scss";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ShareIcon from '@mui/icons-material/Share';
-import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
 import img1 from "../images/s.jpg"
-
-
-const Input = styled("input")({
-  display: "none",
-});
 
 const ViewPost = () => {
   return (
