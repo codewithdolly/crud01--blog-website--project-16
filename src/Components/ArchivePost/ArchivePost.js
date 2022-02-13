@@ -37,7 +37,7 @@ const ArchivePost = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Top 10 Softwers for 2022
+              Top 10 Softwers in 2022
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rem rerum corrupti voluptatem maxime? Dolores ipsa odit perspiciatis sit magni!
