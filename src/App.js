@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.scss";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-import { NewPost, EditPost, ViewPost, ArchivePost } from "./Components";
+import { ViewPost, NewPost } from "./Components";
+import ArchivePost from "./Components/ArchivePost/ArchivePost";
+import EditPost from "./Components/EditPost/EditPost";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -109,13 +111,14 @@ function App() {
     <>
       <BrowserRouter>
         <div className="App">
-          <AppBar position="static">
+          <AppBar position="static" sx={{backgroundColor:"#f25a"}}>
             <Container maxWidth="xl">
               <Toolbar disableGutters>
                 <Typography
                   variant="h6"
                   noWrap
                   component="div"
+                
                   sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
                 >
                   LOGO
@@ -181,8 +184,7 @@ function App() {
                       </>
                     );
                   })}
-                </Box>
-                <Search>
+                  {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -190,7 +192,9 @@ function App() {
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
             />
-          </Search>
+          </Search> */}
+                </Box>
+                
 
                 <Box sx={{ flexGrow: 0 }}>
                   <Tooltip title="Open settings">
