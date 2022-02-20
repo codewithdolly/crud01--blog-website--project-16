@@ -17,72 +17,72 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import user from "./Components/images/d.jpg";
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
+import InputBase from "@mui/material/InputBase";
+import SearchIcon from "@mui/icons-material/Search";
+import { styled, alpha } from "@mui/material/styles";
 
 const pages = [
   {
     name: "Home",
     path: "/",
-    page:<ViewPost />,
+    page: <ViewPost />,
   },
   {
     name: "New Post",
     path: "/newpost",
-    page:<NewPost />,
+    page: <NewPost />,
   },
   {
     name: "Edit",
     path: "/edit",
-    page:<EditPost />,
+    page: <EditPost />,
   },
   {
     name: "Archive",
     path: "/archivepost",
-    page:<ArchivePost />,
+    page: <ArchivePost />,
   },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  marginRight: '10px',
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
+  marginRight: "10px",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
+  "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(1),
-    width: 'auto',
+    width: "auto",
   },
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
+  color: "inherit",
+  "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
       },
     },
   },
@@ -111,14 +111,16 @@ function App() {
     <>
       <BrowserRouter>
         <div className="App">
-          <AppBar position="static" sx={{backgroundColor:"#f25a"}}>
+          <AppBar
+            position="static"
+            sx={{ backgroundColor: " rgba(0, 0, 0, 0.12)", color: "black" }}
+          >
             <Container maxWidth="xl">
               <Toolbar disableGutters>
                 <Typography
                   variant="h6"
                   noWrap
                   component="div"
-                
                   sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
                 >
                   LOGO
@@ -176,7 +178,12 @@ function App() {
                           <Button
                             key={page}
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: "white", display: "block" }}
+                            sx={{
+                              my: 2,
+                              color: "white",
+                              display: "block",
+                              color: "black",
+                            }}
                           >
                             {page.name}
                           </Button>
@@ -184,24 +191,24 @@ function App() {
                       </>
                     );
                   })}
-                  {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search> */}
                 </Box>
-                
 
-                <Box sx={{ flexGrow: 0 }}>
+                <Box sx={{ flexGrow: 0, display: "flex" }}>
+                  <Search>
+                    <SearchIconWrapper>
+                      <SearchIcon />
+                    </SearchIconWrapper>
+                    <StyledInputBase
+                      placeholder="Search…"
+                      inputProps={{ "aria-label": "search" }}
+                    />
+                  </Search>
                   <Tooltip title="Open settings">
                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                       <Avatar alt="Remy Sharp" src={user} />
                     </IconButton>
                   </Tooltip>
+
                   <Menu
                     sx={{ mt: "45px" }}
                     id="menu-appbar"
@@ -231,13 +238,14 @@ function App() {
         </div>
 
         <Routes>
-        <Route index path="/newpost" element={<NewPost />} />
-        {pages.map((page)=>{
-          return(<>
-          
-            <Route path={page.path} element={page.page} />
-          </>)
-        })}
+          <Route index path="/newpost" element={<NewPost />} />
+          {pages.map((page) => {
+            return (
+              <>
+                <Route path={page.path} element={page.page} />
+              </>
+            );
+          })}
         </Routes>
       </BrowserRouter>
     </>
