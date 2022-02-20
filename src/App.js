@@ -39,8 +39,8 @@ const pages = [
   },
   {
     name: "Archive",
-    path: "/archivepost",
-    page: <ArchivePost />,
+    path: "/view",
+    page: <ViewPost />,
   },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
