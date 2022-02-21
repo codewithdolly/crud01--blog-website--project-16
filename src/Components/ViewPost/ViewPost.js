@@ -41,7 +41,8 @@ const ViewPost = () => {
         </Typography>
        
       </div>
-      <SubNav />
+      <Typography className="subNav" > <SubNav /></Typography>
+     
     </>
   );
 };
