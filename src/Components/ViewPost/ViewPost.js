@@ -2,6 +2,7 @@ import React from "react";
 import "./ViewPost.scss";
 import { Typography } from "@mui/material";
 import logo from "../images/logo.png";
+import SubNav from "./SubNav";
 
 const ViewPost = () => {
   return (
@@ -38,6 +39,7 @@ const ViewPost = () => {
             />
           </a>
         </Typography>
+        <SubNav />
       </div>
     </>
   );
