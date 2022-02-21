@@ -39,8 +39,9 @@ const ViewPost = () => {
             />
           </a>
         </Typography>
-        <SubNav />
+       
       </div>
+      <SubNav />
     </>
   );
 };

@@ -8,6 +8,7 @@ import Blog from "./Blog";
 import Home from "./Home";
 import Contact from "./Contact"
 import AboutUs from "./AboutUs"
+import CssBaseline  from '@mui/material/CssBaseline';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -51,6 +52,7 @@ const SubNav = () => {
 
   return (
     <>
+    <CssBaseline />
       <Container maxWidth="lg" sx={{ pt: 8 }}>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
