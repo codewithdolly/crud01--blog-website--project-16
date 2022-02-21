@@ -61,7 +61,7 @@ const SubNav = () => {
               onChange={handleChange}
               aria-label="basic tabs example"
               textColor="secondary[100]"
-              style={{ color: "#9C8156" }}
+              style={{ color: "#B19484" }}
               indicatorColor="secondery"
             >
               <Tab label="Home" {...a11yProps(0)} />

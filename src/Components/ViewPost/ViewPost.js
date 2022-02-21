@@ -19,30 +19,35 @@ const ViewPost = () => {
           <img src={logo} alt="logo" />
         </Typography>
         <Typography component="div" sx={{ mt: -5 }}>
-          <a href="#" style={{ textDecoration: "none", color: "black" }}>
+          <a href="#" style={{ textDecoration: "none", color:"#B19484" }}>
             <i class="fa-brands fa-facebook-f" style={{ padding: "0 5px" }} />
           </a>
-          <a href="#" style={{ textDecoration: "none", color: "black" }}>
+          <a href="#" style={{ textDecoration: "none", color: "#B19484" }}>
+            <i class="fa-brands fa-twitter" style={{ padding: "0 5px" }} />
+          </a>
+          <a href="#" style={{ textDecoration: "none", color: "#B19484" }}>
             <i class="fa-brands fa-instagram" style={{ padding: "0 5px" }} />
           </a>
-          <a href="#" style={{ textDecoration: "none", color: "black" }}>
+          <a href="#" style={{ textDecoration: "none", color: "#B19484" }}>
             {" "}
             <i class="fa-brands fa-linkedin-in" style={{ padding: "0 5px" }} />
           </a>
-          <a href="#" style={{ textDecoration: "none", color: "black" }}>
+          <a href="#" style={{ textDecoration: "none", color: "#B19484" }}>
             <i class="fa-brands fa-github" style={{ padding: "0 5px" }} />
           </a>
-          <a href="#" style={{ textDecoration: "none", color: "black" }}>
+          <a href="#" style={{ textDecoration: "none", color: "#B19484" }}>
             <i
               class="fa-solid fa-earth-americas"
               style={{ padding: "0 5px" }}
             />
+            
           </a>
         </Typography>
-       
       </div>
-      <Typography className="subNav" > <SubNav /></Typography>
-     
+      <Typography className="subNav">
+        {" "}
+        <SubNav />
+      </Typography>
     </>
   );
 };
