@@ -7,6 +7,7 @@ import Grid from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
 import HomePost from "./HomePost";
 import RightSidebar from "./RightSidebar";
+import PopularPost from "./PopularPost";
 
 const Home = () => {
   return (
@@ -48,10 +49,12 @@ const Home = () => {
         <Grid container spacing={{ xs: 2, md: 3 }}>
           <Grid xs={12} sm={12} md={8} lg={8} sx={{ px: 2 }} >
            <HomePost />
+           
           </Grid>
           <Grid sx={{ display: { xs: 'none', sm: 'block' } }} md={4} lg={4} >
            <RightSidebar />
           </Grid>
+          <PopularPost />
         </Grid>
       </Box>
     </>

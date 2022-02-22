@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import Pagination from '@mui/material/Pagination';
+import Pagination from "@mui/material/Pagination";
 
 const HomePost = () => {
   return (
@@ -123,7 +123,12 @@ const HomePost = () => {
         })}
 
         {/* pagination */}
-        <Pagination count={200} variant="outlined" sx={{textAlign: "center", my:10}} shape="rounded" />
+        <Pagination
+          count={200}
+          variant="outlined"
+          sx={{ textAlign: "center", my: 10 }}
+          shape="rounded"
+        />
       </Box>
     </>
   );
