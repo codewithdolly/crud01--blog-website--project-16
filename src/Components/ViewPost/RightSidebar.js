@@ -29,7 +29,7 @@ const RightSidebar = () => {
             <Typography
               variant="body2"
               color="text.secondary"
-              endIcon={<ArrowRightAltIcon />}
+              endIcon={<Typography component="a"rrowRightAltIcon />}
             >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut laboren pellentesque.{" "}
@@ -85,6 +85,103 @@ const RightSidebar = () => {
               </>
             );
           })}
+        </Card>
+
+        {/* Social media */}
+        <Card sx={{ my: 8 }}>
+          <Typography
+            component="div"
+            variant="h5"
+            style={{
+              padding: "10px",
+              margin: "10px 0",
+              borderBottom: "6px solid menu",
+            }}
+          >
+            Social Media
+          </Typography>
+
+          <Box sx={{alignItems: "center", py:2, justifyContent:"space-evenly" }}>
+              <Typography component="a"
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  backgroundColor: "#B19484",
+                  color: "white",
+                  padding: "5px 8px",
+                  borderRadius: "50%",
+                  marginRight: "2px",
+                }}
+              >
+                <i class="fa-brands fa-facebook-f" />
+              </Typography>
+              <Typography component="a"
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  backgroundColor: "#B19484",
+                  color: "white",
+                  padding: "5px 5px",
+                  borderRadius: "50%",
+                  marginRight: "2px",
+                }}
+              >
+                <i class="fa-brands fa-twitter" />
+              </Typography>
+              <Typography component="a"
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  backgroundColor: "#B19484",
+                  color: "white",
+                  padding: "5px 8px",
+                  borderRadius: "50%",
+                  marginRight: "2px",
+                }}
+              >
+                <i class="fa-brands fa-instagram" />
+              </Typography>
+              <Typography component="a"
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  backgroundColor: "#B19484",
+                  color: "white",
+                  padding: " 5px 5px",
+                  borderRadius: "50%",
+                  marginRight: "2px",
+                }}
+              >
+                {" "}
+                <i class="fa-brands fa-linkedin-in" />
+              </Typography>
+              <Typography component="a"
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  backgroundColor: "#B19484",
+                  color: "white",
+                  padding: " 5px 5px",
+                  borderRadius: "50%",
+                  marginRight: "2px",
+                }}
+              >
+                <i class="fa-brands fa-github" />
+              </Typography>
+              <Typography component="a"
+                href="#"
+                style={{
+                  textDecoration: "none",
+                  backgroundColor: "#B19484",
+                  color: "white",
+                  padding: " 5px 5px",
+                  borderRadius: "50%",
+                  marginRight: "2px",
+                }}
+              >
+                <i class="fa-solid fa-earth-americas" />
+              </Typography>
+            </Box>
         </Card>
       </Box>
     </>

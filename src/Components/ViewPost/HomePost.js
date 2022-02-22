@@ -20,7 +20,7 @@ const HomePost = () => {
                   image={blog.img}
                   alt="green iguana"
                 />
-                <Button sx={{backgroundColor:"#9c8156", color:"white", position:"relative", left:"20rem", bottom:"3rem" }}>Traval</Button>
+                <Button sx={{backgroundColor:"#9c8156", color:"white", position:"relative", left:"18.5rem", bottom:"3.5rem" }}>Traval</Button>
                 <CardContent sx={{ textAlign: "left", p:2  }}>
                   <Typography gutterBottom component="div" color="#B19484">
                     07 JUN 2021
