@@ -4,12 +4,7 @@ import { Button, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { useTheme } from "@mui/material/styles";
-import IconButton from "@mui/material/IconButton";
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
 import hillImg from "../images/hill.jpg";
 import signing from "../images/signing.png";
 
@@ -88,7 +83,7 @@ const RightSidebar = () => {
         </Card>
 
         {/* Social media */}
-        <Card sx={{ my: 8 }}>
+        <Card sx={{ mb: 8 }}>
           <Typography
             component="div"
             variant="h5"
@@ -183,12 +178,31 @@ const RightSidebar = () => {
               </Typography>
             </Box>
         </Card>
+
+        {/* Tags */}
+        <Card sx={{ mb: 8, p:2 }}>
+          <Typography
+            component="div"
+            variant="h5"
+            style={{
+            //   padding: "5px 0",
+              margin: "10px 0",
+              borderBottom: "6px solid menu",
+              color:"#B19484"
+            }}
+          >
+            Tags
+          </Typography>
+        {tags.map((tag)=>{return(<Button variant="outlined" style={{ margin:"3px", color:"black", border:"1px solid #B19484"}}>{tag}</Button>)})}
+        </Card>
       </Box>
     </>
   );
 };
 
 export default RightSidebar;
+
+const tags=["AUDIO", "TRAVEL", "FOOD", "EVENT", "WORDPRESS", "VIDEO", "DESIGN", "SPORT", "BLOG", "POST", "IMG", "MASONRY"]
 
 const letestPosts = [
   {
