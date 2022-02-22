@@ -9,6 +9,7 @@ import Home from "./Home";
 import Contact from "./Contact"
 import AboutUs from "./AboutUs"
 import CssBaseline  from '@mui/material/CssBaseline';
+import "./Home.scss"
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -53,7 +54,7 @@ const SubNav = () => {
   return (
     <>
     <CssBaseline />
-      <Container maxWidth="lg" sx={{ pt: 8 }}>
+      <Container maxWidth="lg" sx={{ pt: 8 }} stickyHeader>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
@@ -61,7 +62,7 @@ const SubNav = () => {
               onChange={handleChange}
               aria-label="basic tabs example"
               textColor="secondary[100]"
-              style={{ color: "#B19484" }}
+              style={{ color: "#B19484"}}
               indicatorColor="secondery"
             >
               <Tab label="Home" {...a11yProps(0)} />

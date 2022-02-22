@@ -12,6 +12,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import HomePost from "./HomePost";
+import RightSidebar from "./RightSidebar";
 
 const Home = () => {
   return (
@@ -55,12 +56,7 @@ const Home = () => {
            <HomePost />
           </Grid>
           <Grid xs={12} sm={12} md={3} lg={3}>
-            <img
-              src={hillImg}
-              alt=""
-              width="100%"
-              style={{ opacity: ".6", borderRadius: "10px" }}
-            />
+           <RightSidebar />
           </Grid>
         </Grid>
       </Box>
