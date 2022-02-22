@@ -3,14 +3,8 @@ import "./Home.scss";
 import hillImg from "../images/hill.jpg";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import HomePost from "./HomePost";
 import RightSidebar from "./RightSidebar";
 
@@ -52,10 +46,10 @@ const Home = () => {
       {/* second page */}
       <Box>
         <Grid container spacing={{ xs: 2, md: 3 }}>
-          <Grid xs={12} sm={12} md={8} lg={9} sx={{ px: 2 }} >
+          <Grid xs={12} sm={12} md={8} lg={8} sx={{ px: 2 }} >
            <HomePost />
           </Grid>
-          <Grid sx={{ display: { xs: 'none', sm: 'block' } }} md={4} lg={3} >
+          <Grid sx={{ display: { xs: 'none', sm: 'block' } }} md={4} lg={4} >
            <RightSidebar />
           </Grid>
         </Grid>

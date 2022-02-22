@@ -6,8 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
-import hillImg from "../images/hill.jpg";
-
 const HomePost = () => {
   return (
     <>
@@ -18,10 +16,11 @@ const HomePost = () => {
               <Card sx={{my:2}}>
                 <CardMedia
                   component="img"
-                  height="auto"
+                 
                   image={blog.img}
                   alt="green iguana"
                 />
+                <Button sx={{backgroundColor:"#9c8156", color:"white", position:"relative", left:"20rem", bottom:"3rem" }}>Traval</Button>
                 <CardContent sx={{ textAlign: "left", p:2  }}>
                   <Typography gutterBottom component="div" color="#B19484">
                     07 JUN 2021
