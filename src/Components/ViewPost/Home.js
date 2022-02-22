@@ -51,11 +51,11 @@ const Home = () => {
 
       {/* second page */}
       <Box>
-        <Grid container spacing={2}>
-          <Grid xs={12} sm={12} md={8} lg={9} sx={{ px: 2 }}>
+        <Grid container spacing={{ xs: 2, md: 3 }}>
+          <Grid xs={12} sm={12} md={8} lg={9} sx={{ px: 2 }} >
            <HomePost />
           </Grid>
-          <Grid xs={12} sm={12} md={3} lg={3}>
+          <Grid sx={{ display: { xs: 'none', sm: 'block' } }} md={4} lg={3} >
            <RightSidebar />
           </Grid>
         </Grid>
