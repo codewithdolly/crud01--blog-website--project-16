@@ -5,6 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { useTheme } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
 import hillImg from "../images/hill.jpg";
 import signing from "../images/signing.png";
 
@@ -24,7 +25,7 @@ const RightSidebar = () => {
             <Typography
               variant="body2"
               color="text.secondary"
-              endIcon={<Typography component="a"rrowRightAltIcon />}
+              endIcon={<Typography component="a" rrowRightAltIcon />}
             >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut laboren pellentesque.{" "}
@@ -96,104 +97,170 @@ const RightSidebar = () => {
             Social Media
           </Typography>
 
-          <Box sx={{alignItems: "center", py:2, justifyContent:"space-evenly" }}>
-              <Typography component="a"
-                href="#"
-                style={{
-                  textDecoration: "none",
-                  backgroundColor: "#B19484",
-                  color: "white",
-                  padding: "5px 8px",
-                  borderRadius: "50%",
-                  marginRight: "2px",
-                }}
-              >
-                <i class="fa-brands fa-facebook-f" />
-              </Typography>
-              <Typography component="a"
-                href="#"
-                style={{
-                  textDecoration: "none",
-                  backgroundColor: "#B19484",
-                  color: "white",
-                  padding: "5px 5px",
-                  borderRadius: "50%",
-                  marginRight: "2px",
-                }}
-              >
-                <i class="fa-brands fa-twitter" />
-              </Typography>
-              <Typography component="a"
-                href="#"
-                style={{
-                  textDecoration: "none",
-                  backgroundColor: "#B19484",
-                  color: "white",
-                  padding: "5px 8px",
-                  borderRadius: "50%",
-                  marginRight: "2px",
-                }}
-              >
-                <i class="fa-brands fa-instagram" />
-              </Typography>
-              <Typography component="a"
-                href="#"
-                style={{
-                  textDecoration: "none",
-                  backgroundColor: "#B19484",
-                  color: "white",
-                  padding: " 5px 5px",
-                  borderRadius: "50%",
-                  marginRight: "2px",
-                }}
-              >
-                {" "}
-                <i class="fa-brands fa-linkedin-in" />
-              </Typography>
-              <Typography component="a"
-                href="#"
-                style={{
-                  textDecoration: "none",
-                  backgroundColor: "#B19484",
-                  color: "white",
-                  padding: " 5px 5px",
-                  borderRadius: "50%",
-                  marginRight: "2px",
-                }}
-              >
-                <i class="fa-brands fa-github" />
-              </Typography>
-              <Typography component="a"
-                href="#"
-                style={{
-                  textDecoration: "none",
-                  backgroundColor: "#B19484",
-                  color: "white",
-                  padding: " 5px 5px",
-                  borderRadius: "50%",
-                  marginRight: "2px",
-                }}
-              >
-                <i class="fa-solid fa-earth-americas" />
-              </Typography>
-            </Box>
+          <Box
+            sx={{ alignItems: "center", py: 2, justifyContent: "space-evenly" }}
+          >
+            <Typography
+              component="a"
+              href="#"
+              style={{
+                textDecoration: "none",
+                backgroundColor: "#B19484",
+                color: "white",
+                padding: "5px 8px",
+                borderRadius: "50%",
+                marginRight: "2px",
+              }}
+            >
+              <i class="fa-brands fa-facebook-f" />
+            </Typography>
+            <Typography
+              component="a"
+              href="#"
+              style={{
+                textDecoration: "none",
+                backgroundColor: "#B19484",
+                color: "white",
+                padding: "5px 5px",
+                borderRadius: "50%",
+                marginRight: "2px",
+              }}
+            >
+              <i class="fa-brands fa-twitter" />
+            </Typography>
+            <Typography
+              component="a"
+              href="#"
+              style={{
+                textDecoration: "none",
+                backgroundColor: "#B19484",
+                color: "white",
+                padding: "5px 8px",
+                borderRadius: "50%",
+                marginRight: "2px",
+              }}
+            >
+              <i class="fa-brands fa-instagram" />
+            </Typography>
+            <Typography
+              component="a"
+              href="#"
+              style={{
+                textDecoration: "none",
+                backgroundColor: "#B19484",
+                color: "white",
+                padding: " 5px 5px",
+                borderRadius: "50%",
+                marginRight: "2px",
+              }}
+            >
+              {" "}
+              <i class="fa-brands fa-linkedin-in" />
+            </Typography>
+            <Typography
+              component="a"
+              href="#"
+              style={{
+                textDecoration: "none",
+                backgroundColor: "#B19484",
+                color: "white",
+                padding: " 5px 5px",
+                borderRadius: "50%",
+                marginRight: "2px",
+              }}
+            >
+              <i class="fa-brands fa-github" />
+            </Typography>
+            <Typography
+              component="a"
+              href="#"
+              style={{
+                textDecoration: "none",
+                backgroundColor: "#B19484",
+                color: "white",
+                padding: " 5px 5px",
+                borderRadius: "50%",
+                marginRight: "2px",
+              }}
+            >
+              <i class="fa-solid fa-earth-americas" />
+            </Typography>
+          </Box>
         </Card>
 
-        {/* Tags */}
-        <Card sx={{ mb: 8, p:2 }}>
+        {/* NEWSLETTER */}
+        <Card sx={{ mb: 8, py: 2 }}>
           <Typography
             component="div"
             variant="h5"
             style={{
-            //   padding: "5px 0",
+              //   padding: "5px 0",
               margin: "10px 0",
               borderBottom: "6px solid menu",
-              color:"#B19484"
+              color: "#B19484",
             }}
           >
             Tags
           </Typography>
-        {tags.map((tag)=>{return(<Button variant="outlined" style={{ margin:"3px", color:"black", border:"1px solid #B19484"}}>{tag}</Button>)})}
+          {tags.map((tag) => {
+            return (
+              <Button
+                variant="outlined"
+                style={{
+                  margin: "3px",
+                  color: "black",
+                  border: "1px solid #B19484",
+                }}
+              >
+                {tag}
+              </Button>
+            );
+          })}
+        </Card>
+
+        <Card sx={{ mb: 8, py: 2 }}>
+          <Typography
+            component="div"
+            variant="h5"
+            style={{
+              //   padding: "5px 0",
+              margin: "10px 0",
+              borderBottom: "6px solid menu",
+              color: "#B19484",
+            }}
+          >
+            NEWSLETTER
+          </Typography>
+          <Box sx={{ p: 3 }}>
+            <Typography sx={{ color: "#B19484", p: 2 }}>
+              DO NOT MISS OUR NEWS
+            </Typography>
+
+            <Typography
+              component="p"
+              sx={{ color: "silver", fontSize: "14px", py: 2 }}
+            >
+              Sign up and receive the latest <br /> news of our company
+            </Typography>
+
+            <TextField
+              id="filled-basic"
+              label="Message..."
+              variant="standard"
+              fullWidth
+            />
+            <Button
+              variant="contained"
+              fullWidth
+              style={{
+                margin: "20px 0",
+                backgroundColor: "#B19484",
+                border: "1px solid #B19484",
+              }}
+            >
+              SEND
+            </Button>
+          </Box>
         </Card>
       </Box>
     </>
@@ -202,7 +269,20 @@ const RightSidebar = () => {
 
 export default RightSidebar;
 
-const tags=["AUDIO", "TRAVEL", "FOOD", "EVENT", "WORDPRESS", "VIDEO", "DESIGN", "SPORT", "BLOG", "POST", "IMG", "MASONRY"]
+const tags = [
+  "AUDIO",
+  "TRAVEL",
+  "FOOD",
+  "EVENT",
+  "WORDPRESS",
+  "VIDEO",
+  "DESIGN",
+  "SPORT",
+  "BLOG",
+  "POST",
+  "IMG",
+  "MASONRY",
+];
 
 const letestPosts = [
   {
