@@ -223,7 +223,7 @@ const RightSidebar = () => {
             component="div"
             variant="h5"
             style={{
-              //   padding: "5px 0",
+        
               margin: "10px 0",
               borderBottom: "6px solid menu",
               color: "#B19484",

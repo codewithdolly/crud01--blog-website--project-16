@@ -4,13 +4,26 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Grid from '@mui/material/Grid';
+import { Typography, Card } from '@mui/material';
 
 const PopularPost=()=> {
   return (
     <Grid container spacing={2}>
     <Grid item xs={12}>
     
-  
+    <Card>
+    <Typography
+            component="div"
+            variant="h5"
+            style={{
+              padding:"1rem 0",
+              margin: "10px 0",
+              borderBottom: "6px solid menu",
+              color: "#B19484",
+            }}
+          >
+           POPULAR POSTS
+          </Typography>
     <ImageList className='imgList'>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
@@ -21,6 +34,7 @@ const PopularPost=()=> {
             loading="lazy"
            
           />
+          
           <ImageListItemBar
             title={item.title}
             subtitle={<span>by: {item.author}</span>}
@@ -29,6 +43,7 @@ const PopularPost=()=> {
         </ImageListItem>
       ))}
     </ImageList>
+    </Card>
     </Grid>
     </Grid>
   );
