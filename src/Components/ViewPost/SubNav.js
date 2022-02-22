@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Blog from "./Blog";
-import Home from "./Home";
 import Contact from "./Contact"
 import AboutUs from "./AboutUs"
 import CssBaseline  from '@mui/material/CssBaseline';
@@ -65,22 +64,18 @@ const SubNav = () => {
               style={{ color: "#B19484"}}
               indicatorColor="secondery"
             >
-              <Tab label="Home" {...a11yProps(0)} />
-              <Tab label="Blog" {...a11yProps(1)} />
-              <Tab label="About Us" {...a11yProps(2)} />
-              <Tab label="Contact" {...a11yProps(3)} />
+              <Tab label="Blog" {...a11yProps(0)} />
+              <Tab label="About Us" {...a11yProps(1)} />
+              <Tab label="Contact" {...a11yProps(2)} />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            <Home />
-          </TabPanel>
-          <TabPanel value={value} index={1}>
             <Blog />
           </TabPanel>
-          <TabPanel value={value} index={2}>
+          <TabPanel value={value} index={1}>
             <AboutUs />
           </TabPanel>
-          <TabPanel value={value} index={3}>
+          <TabPanel value={value} index={2}>
             <Contact />
           </TabPanel>
         </Box>

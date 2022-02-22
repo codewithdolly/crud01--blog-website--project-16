@@ -4,7 +4,6 @@ import me from "../images/ice.jpg";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import HomePost from "./HomePost";
 import RightSidebar from "./RightSidebar";
 import PopularPost from "./PopularPost";
 import MyStory from "./MyStory";
