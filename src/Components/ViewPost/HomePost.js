@@ -5,23 +5,33 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import Pagination from '@mui/material/Pagination';
 
 const HomePost = () => {
   return (
     <>
-      <Box >
+      <Box>
         {blogs.map((blog) => {
           return (
             <>
-              <Card sx={{my:2}}>
+              <Card sx={{ my: 2 }}>
                 <CardMedia
                   component="img"
-                 
                   image={blog.img}
                   alt="green iguana"
                 />
-                <Button sx={{backgroundColor:"#9c8156", color:"white", position:"relative", left:"18.5rem", bottom:"3.5rem" }}>Traval</Button>
-                <CardContent sx={{ textAlign: "left", p:2  }}>
+                <Button
+                  sx={{
+                    backgroundColor: "#9c8156",
+                    color: "white",
+                    position: "relative",
+                    left: "18.5rem",
+                    bottom: "3.5rem",
+                  }}
+                >
+                  Traval
+                </Button>
+                <CardContent sx={{ textAlign: "left", p: 2 }}>
                   <Typography gutterBottom component="div" color="#B19484">
                     07 JUN 2021
                   </Typography>
@@ -111,6 +121,9 @@ const HomePost = () => {
             </>
           );
         })}
+
+        {/* pagination */}
+        <Pagination count={200} variant="outlined" sx={{textAlign: "center", my:10}} shape="rounded" />
       </Box>
     </>
   );
@@ -121,30 +134,28 @@ export default HomePost;
 const blogs = [
   {
     title: `MAECENAS CONSECTETUR`,
-    img: "../images/hill.jpg"
+    img: "../images/hill.jpg",
   },
   {
     title: `MAECENAS CONSECTETUR`,
-    img: "../images/lappy.jpg"
-  },
- 
-  {
-    title: `MAECENAS CONSECTETUR`,
-    img: "../images/iceee.jpg"
-  },
-  
-  {
-    title: `MAECENAS CONSECTETUR`,
-    img: "../images/office.jpg"
-  },
-  {
-    title: `MAECENAS CONSECTETUR`,
-    img: "../images/panting.jpg"
-  },
-  {
-    title: `MAECENAS CONSECTETUR`,
-    img: "../images/img5.jpg"
+    img: "../images/lappy.jpg",
   },
 
- 
+  {
+    title: `MAECENAS CONSECTETUR`,
+    img: "../images/iceee.jpg",
+  },
+
+  {
+    title: `MAECENAS CONSECTETUR`,
+    img: "../images/office.jpg",
+  },
+  {
+    title: `MAECENAS CONSECTETUR`,
+    img: "../images/panting.jpg",
+  },
+  {
+    title: `MAECENAS CONSECTETUR`,
+    img: "../images/img5.jpg",
+  },
 ];
