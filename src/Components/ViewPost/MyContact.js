@@ -105,6 +105,7 @@ const MyContact = () => {
             </Typography>
           </CardContent>
         </Card>
+        
       </Box>
     </>
   );
