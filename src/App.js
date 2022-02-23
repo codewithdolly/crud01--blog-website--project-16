@@ -18,6 +18,7 @@ import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact
 import SentimentVerySatisfiedOutlinedIcon from "@mui/icons-material/SentimentVerySatisfiedOutlined";
 import SaveAsOutlinedIcon from "@mui/icons-material/SaveAsOutlined";
 import ArchiveIcon from "@mui/icons-material/Archive";
+import CssBaseline  from '@mui/material/CssBaseline';
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -44,8 +45,9 @@ function App() {
             <SocialMedia />
           </div>
         </Box>
-
-        <Container sx={{ pt: 8 }} stickyHeader>
+<Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <CssBaseline />
+        <Container sx={{ pt: 8 }} stickyHeader maxWidth="lg">
           <Tabs
             value={value}
             onChange={handleChange}
@@ -65,6 +67,7 @@ function App() {
             })}
           </Tabs>
         </Container>
+        </Box>
 
         <Routes>
           <Route index path="/newpost" element={<NewPost />} />
