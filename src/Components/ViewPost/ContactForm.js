@@ -33,7 +33,7 @@ const ContactForm = () => {
           style={{ width: "90%", border:"1px solid silver", margin:"0 20px" }}
          />
     
-    <Button variant="contained" style={{backgroundColor:"#B19484", alignText:"left", padding:"10px 30px"}}>Send</Button>
+    <Button variant="contained" style={{backgroundColor:"#B19484", textTransform: "capitalize"}}>Send</Button>
     </Box>
     
   );
