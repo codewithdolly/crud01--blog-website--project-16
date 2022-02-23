@@ -8,16 +8,16 @@ import Blog from "./Components/ViewPost/Blog";
 import Contact from "./Components/ViewPost/Contact";
 import { Typography } from "@mui/material";
 import logo from "./Components/images/logo.png";
-// import SubNav from "./Components/ViewPost/SubNav";
+import Container from "@mui/material/Container";
 import SocialMedia from "./Components/ViewPost/SocialMedia";
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import FeedIcon from '@mui/icons-material/Feed';
-import PostAddIcon from '@mui/icons-material/PostAdd';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-import SentimentVerySatisfiedOutlinedIcon from '@mui/icons-material/SentimentVerySatisfiedOutlined';
-import SaveAsOutlinedIcon from '@mui/icons-material/SaveAsOutlined';
-import ArchiveIcon from '@mui/icons-material/Archive';
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import FeedIcon from "@mui/icons-material/Feed";
+import PostAddIcon from "@mui/icons-material/PostAdd";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import SentimentVerySatisfiedOutlinedIcon from "@mui/icons-material/SentimentVerySatisfiedOutlined";
+import SaveAsOutlinedIcon from "@mui/icons-material/SaveAsOutlined";
+import ArchiveIcon from "@mui/icons-material/Archive";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -43,17 +43,28 @@ function App() {
             </Typography>
             <SocialMedia />
           </div>
-          {/* <SubNav /> */}
         </Box>
 
-        <Tabs value={value} onChange={handleChange} aria-label="icon label tabs example">
-      {pages.map((page)=>{
-        return (<>
-          <Link to={page.path}><Tab icon={page.icon} label="RECENTS" /></Link>
-        </>)
-      })}
-    </Tabs>
-
+        <Container sx={{ pt: 8 }} stickyHeader>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="icon label tabs example"
+          >
+            {pages.map((page) => {
+              return (
+                <>
+                  <Link
+                    to={page.path}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <Tab icon={page.icon} label="RECENTS" />
+                  </Link>
+                </>
+              );
+            })}
+          </Tabs>
+        </Container>
 
         <Routes>
           <Route index path="/newpost" element={<NewPost />} />
@@ -77,39 +88,39 @@ const pages = [
     name: "Blog",
     path: "/",
     page: <Blog />,
-    icon: <FeedIcon />,
+    icon: <FeedIcon className="icon" />,
   },
 
   {
     name: "New Post",
     path: "/newpost",
     page: <NewPost />,
-    icon: <PostAddIcon />,
+    icon: <PostAddIcon className="icon" />,
   },
 
   {
     name: "Edit",
     path: "/edit",
     page: <EditPost />,
-    icon: <SaveAsOutlinedIcon />,
+    icon: <SaveAsOutlinedIcon className="icon" />,
   },
   {
     name: "Archive",
     path: "/archive",
     page: <ArchivePost />,
-    icon: <ArchiveIcon />,
+    icon: <ArchiveIcon className="icon" />,
   },
 
   {
     name: "About Us",
     path: "/about",
     page: <AboutUs />,
-    icon: <SentimentVerySatisfiedOutlinedIcon />,
+    icon: <SentimentVerySatisfiedOutlinedIcon className="icon" />,
   },
   {
     name: "Contact",
     path: "/contact",
     page: <Contact />,
-    icon: <ConnectWithoutContactIcon />,
+    icon: <ConnectWithoutContactIcon className="icon" />,
   },
 ];
