@@ -8,7 +8,6 @@ import Blog from "./Blog";
 import Contact from "./Contact"
 import AboutUs from "./AboutUs"
 import CssBaseline  from '@mui/material/CssBaseline';
-import "./Home.scss"
 
 interface TabPanelProps {
   children?: React.ReactNode;

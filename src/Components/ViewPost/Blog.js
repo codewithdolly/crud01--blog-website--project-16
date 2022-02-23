@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.scss";
+import "./Blog.scss";
 import hillImg from "../images/hill.jpg";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";

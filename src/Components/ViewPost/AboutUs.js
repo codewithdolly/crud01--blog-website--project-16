@@ -1,6 +1,4 @@
 import React from "react";
-import "./Home.scss";
-import me from "../images/ice.jpg";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";

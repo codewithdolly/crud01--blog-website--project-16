@@ -6,7 +6,7 @@ import { Card } from '@mui/material';
 const FollowUs = () => {
   return (
    <>
-         {/* Social media */}
+
          <Card sx={{ mb: 8 , textAlign:"center"}}>
           <Typography
             component="div"
