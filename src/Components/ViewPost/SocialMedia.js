@@ -4,7 +4,7 @@ import React from 'react'
 const SocialMedia = () => {
   return (
     <Box>
-         <Typography component="div" sx={{ mt: -5 }}>
+         <Typography component="div" sx={{ mt: -5, textAlign:"center" }}>
           <a href="#" style={{ textDecoration: "none", color:"#B19484" }}>
             <i class="fa-brands fa-facebook-f" style={{ padding: "0 5px" }} />
           </a>
@@ -25,9 +25,7 @@ const SocialMedia = () => {
             <i
               class="fa-solid fa-earth-americas"
               style={{ padding: "0 5px" }}
-            />
-            
-          </a>
+            /></a>
         </Typography>
     </Box>
   )

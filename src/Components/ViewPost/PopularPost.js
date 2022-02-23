@@ -11,7 +11,7 @@ const PopularPost=()=> {
     <Grid container spacing={2}>
     <Grid item xs={12}>
     
-    <Card>
+    <Card sx={{textAlign:"center"}}>
     <Typography
             component="div"
             variant="h5"
