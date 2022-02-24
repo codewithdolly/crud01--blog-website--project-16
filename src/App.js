@@ -53,14 +53,13 @@ function App() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-               
               }}
             >
               <Tabs
                 value={value}
                 onChange={handleChange}
                 aria-label="icon label tabs example"
-                sx={{ pb:3}}
+                sx={{ pb: 3 }}
               >
                 {pages.map((page) => {
                   return (
@@ -69,7 +68,7 @@ function App() {
                         to={page.path}
                         style={{ textDecoration: "none", color: "black" }}
                       >
-                        <Tab icon={page.icon} label={page.name}  />
+                        <Tab icon={page.icon} label={page.name} />
                       </Link>
                     </>
                   );
@@ -95,7 +94,6 @@ function App() {
                   <SearchIcon />
                 </IconButton>
                 <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-               
               </Box>
             </Box>
 
