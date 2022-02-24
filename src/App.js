@@ -70,7 +70,7 @@ function App() {
                         to={page.path}
                         style={{ textDecoration: "none", color: "black" }}
                       >
-                        <Tab icon={page.icon} label={page.name} />
+                        <Tab icon={page.icon} label={page.name}  />
                       </Link>
                     </>
                   );

@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from "@mui/material/Box";
 import { Button, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import TextField from "@mui/material/TextField";
 
 const NewsLetter = () => {
+const [value, setValue]= useState("");
+
+const onInputChange= (event)=>{
+  setValue(event.target.value)
+}
+
+const onSubmit=()=>{
+  console.log(value);
+  setValue("")
+}
+
   return (
     <>
         <Card sx={{ mb: 8, py: 2, textAlign:"center" }}>
@@ -18,7 +29,7 @@ const NewsLetter = () => {
               color: "#B19484",
             }}
           >
-            NEWSLETTER
+            NEWS LETTER
           </Typography>
           <Box sx={{ p: 3 }}>
             <Typography sx={{ color: "#B19484", p: 2 }}>
@@ -36,10 +47,13 @@ const NewsLetter = () => {
               id="filled-basic"
               label="Message..."
               variant="standard"
+              value={value}
               fullWidth
+              onChange={onInputChange}
             />
             <Button
               variant="contained"
+              onClick={onSubmit}
               fullWidth
               style={{
                 margin: "20px 0",
