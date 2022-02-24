@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import { Box } from "@mui/material";
-import { NewPost, EditPost, ArchivePost } from "./Components";
+import { NewPost } from "./Components";
 import AboutUs from "./Components/ViewPost/AboutUs";
 import Blog from "./Components/ViewPost/Blog";
 import Contact from "./Components/ViewPost/Contact";
@@ -18,7 +18,6 @@ import GroupIcon from "@mui/icons-material/Group";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import IconButton from "@mui/material/IconButton";
 
 function App() {

@@ -1,13 +1,13 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import { Button, Card, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 
 const ContactForm = () => {
   return (
-    <Box style={{padding:"10px", margin:"5px",  border:"2px solid menu", borderRadius:"10px"}}
-     component="form"
+    <Box style={{ padding: "10px", margin: "5px", border: "2px solid menu", borderRadius: "10px" }}
+      component="form"
       noValidate
       autoComplete="off">
       <Typography>
