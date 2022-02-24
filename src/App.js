@@ -13,12 +13,13 @@ import SocialMedia from "./Components/ViewPost/SocialMedia";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import FeedIcon from "@mui/icons-material/Feed";
-import PostAddIcon from "@mui/icons-material/PostAdd";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
-import SentimentVerySatisfiedOutlinedIcon from "@mui/icons-material/SentimentVerySatisfiedOutlined";
-import SaveAsOutlinedIcon from "@mui/icons-material/SaveAsOutlined";
-import ArchiveIcon from "@mui/icons-material/Archive";
-import CssBaseline  from '@mui/material/CssBaseline';
+import GroupIcon from "@mui/icons-material/Group";
+import SearchIcon from "@mui/icons-material/Search";
+import InputBase from "@mui/material/InputBase";
+import Divider from "@mui/material/Divider";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import IconButton from "@mui/material/IconButton";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -45,40 +46,76 @@ function App() {
             <SocialMedia />
           </div>
         </Box>
-<Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <CssBaseline />
-        <Container sx={{ pt: 8 }} stickyHeader maxWidth="lg">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="icon label tabs example"
-          >
-            {pages.map((page) => {
-              return (
-                <>
-                  <Link
-                    to={page.path}
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    <Tab icon={page.icon} label="RECENTS" />
-                  </Link>
-                </>
-              );
-            })}
-          </Tabs>
-        </Container>
-        </Box>
 
-        <Routes>
-          <Route index path="/newpost" element={<NewPost />} />
-          {pages.map((page) => {
-            return (
-              <>
-                <Route path={page.path} element={page.page} />
-              </>
-            );
-          })}
-        </Routes>
+        <Container sx={{ pt: 8 }} stickyHeader maxWidth="lg">
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="icon label tabs example"
+              >
+                {pages.map((page) => {
+                  return (
+                    <>
+                      <Link
+                        to={page.path}
+                        style={{ textDecoration: "none", color: "black" }}
+                      >
+                        <Tab icon={page.icon} label={page.name} />
+                      </Link>
+                    </>
+                  );
+                })}
+              </Tabs>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <InputBase
+                  sx={{ ml: 1, backgroundColor: "#fff" }}
+                  placeholder="Search..."
+                  inputProps={{ "aria-label": "Search..." }}
+                />
+                <IconButton
+                  type="submit"
+                  sx={{ p: "10px" }}
+                  aria-label="search"
+                >
+                  <SearchIcon />
+                </IconButton>
+                <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+                <IconButton
+                  color="inherit"
+                  sx={{ p: "10px" }}
+                  aria-label="user"
+                >
+                  <AccountCircleIcon />
+                </IconButton>
+              </Box>
+            </Box>
+
+            <Routes>
+              <Route index path="/newpost" element={<NewPost />} />
+              {pages.map((page) => {
+                return (
+                  <>
+                    <Route path={page.path} element={page.page} />
+                  </>
+                );
+              })}
+            </Routes>
+          </Box>
+        </Container>
       </BrowserRouter>
     </>
   );
@@ -94,31 +131,31 @@ const pages = [
     icon: <FeedIcon className="icon" />,
   },
 
-  {
-    name: "New Post",
-    path: "/newpost",
-    page: <NewPost />,
-    icon: <PostAddIcon className="icon" />,
-  },
+  // {
+  //   name: "New Post",
+  //   path: "/newpost",
+  //   page: <NewPost />,
+  //   icon: <PostAddIcon className="icon" />,
+  // },
 
-  {
-    name: "Edit",
-    path: "/edit",
-    page: <EditPost />,
-    icon: <SaveAsOutlinedIcon className="icon" />,
-  },
-  {
-    name: "Archive",
-    path: "/archive",
-    page: <ArchivePost />,
-    icon: <ArchiveIcon className="icon" />,
-  },
+  // {
+  //   name: "Edit",
+  //   path: "/edit",
+  //   page: <EditPost />,
+  //   icon: <SaveAsOutlinedIcon className="icon" />,
+  // },
+  // {
+  //   name: "Archive",
+  //   path: "/archive",
+  //   page: <ArchivePost />,
+  //   icon: <ArchiveIcon className="icon" />,
+  // },
 
   {
     name: "About Us",
     path: "/about",
     page: <AboutUs />,
-    icon: <SentimentVerySatisfiedOutlinedIcon className="icon" />,
+    icon: <GroupIcon className="icon" />,
   },
   {
     name: "Contact",
