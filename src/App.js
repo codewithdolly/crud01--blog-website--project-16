@@ -47,7 +47,7 @@ function App() {
           </div>
         </Box>
 
-        <Container sx={{ pt: 8 }} stickyHeader maxWidth="lg">
+        <Container stickyHeader maxWidth="lg">
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Box
               sx={{
