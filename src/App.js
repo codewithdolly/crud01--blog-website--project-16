@@ -19,6 +19,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
+import CloudForm from "./Components/CrudForm/CloudForm";
 
 function App() {
   const [value, setValue] = React.useState(0);
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <>
+    <CloudForm />
       <BrowserRouter>
         <Box>
           <div
@@ -109,6 +111,7 @@ function App() {
             </Routes>
           </Box>
         </Container>
+
       </BrowserRouter>
     </>
   );
