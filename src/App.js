@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-    <CloudForm />
+   
       <BrowserRouter>
         <Box>
           <div
@@ -110,6 +110,7 @@ function App() {
               })}
             </Routes>
           </Box>
+          <CloudForm />
         </Container>
 
       </BrowserRouter>

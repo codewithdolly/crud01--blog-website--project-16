@@ -14,7 +14,7 @@ const CloudForm = () => {
                 type="text"
                 className="form-control"
                 id="exampleInputPassword1"
-                placeholder="Password"
+                placeholder="You Name"
               />
             </div>
             <label for="exampleInputEmail1">Email address</label>
