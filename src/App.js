@@ -110,6 +110,7 @@ function App() {
               })}
             </Routes>
           </Box>
+             <center> <h2>CRUD Application</h2></center>
           <CloudForm />
         </Container>
 
